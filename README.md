@@ -36,33 +36,23 @@ It supports Python 3 and Anki 2.1.
 Installing
 ----------
 
-0. Install Anki. The currently supported version range is 2.1.1〜2.1.11, with the
-   exception of 2.1.9<sup id="readme-fn-01b">[1](#readme-fn-01)</sup>. (Keep in
-   mind this range only applies to the Anki used by the server, clients can be
-   as old as 2.0.27 and still work.) Running the server with other versions might
-   work as long as they're not 2.0.x, but things might break, so do it at your
-   own risk. If for some reason you can't get the supported Anki version easily
-   on your system, you can use `anki-bundled` from this repo:
+1. Install Anki using `anki-bundled` from this repo:
 
         $ git submodule update --init
-        $ cd anki-bundled
-        $ pip install -r requirements.txt
+        $ pip install -r anki2.1.22-requirements.txt
 
-   Keep in mind `pyaudio`, a dependency of Anki, requires development headers for
-   Python 3 and PortAudio to be present before running `pip`. If you can't or
-   don't want to install these, you can try [patching Anki](#running-ankisyncd-without-pyaudio).
 
-1. Install the dependencies:
+2. Install the dependencies:
 
         $ pip install webob
 
-2. Modify ankisyncd.conf according to your needs
+3. Modify ankisyncd.conf according to your needs
 
-3. Create user:
+4. Create user:
 
         $ ./ankisyncctl.py adduser <username>
 
-4. Run ankisyncd:
+5. Run ankisyncd:
 
         $ python -m ankisyncd
 
